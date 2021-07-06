@@ -3,14 +3,14 @@
 
 // Execute `rustlings hint generics2` for hints!
 
-// I AM NOT DONE
-
-struct Wrapper {
-    value: u32,
+struct Wrapper<T> {
+    value: T,
 }
 
-impl Wrapper {
-    pub fn new(value: u32) -> Self {
+//Note that we have to declare T just after impl so we can use it to specify that we’re implementing methods on the type Point<T>. 
+//By declaring T as a generic type after impl, Rust can identify that the type in the angle brackets in Point is a generic type rather than a concrete type.
+impl<T> Wrapper<T> {
+    pub fn new(value: T) -> Self {
         Wrapper { value }
     }
 }
