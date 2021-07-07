@@ -2,8 +2,7 @@
 // Make me compile, without taking the macro out of the module!
 // Execute `rustlings hint macros3` for hints :)
 
-// I AM NOT DONE
-
+#[macro_use] //there is also #[macro_export] if not used in this file I think
 mod macros {
     macro_rules! my_macro {
         () => {
