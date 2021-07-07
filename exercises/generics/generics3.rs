@@ -16,6 +16,7 @@ pub struct ReportCard<T: std::fmt::Display> { //if bounding is here, it has to b
     pub student_age: u8,
 }
 
+//boundings can also be shown using the 'where' syntax, and multiple traits can be bound with <T: trait1 + trait2>
 impl<T: std::fmt::Display> ReportCard<T> {
     pub fn print(&self) -> String {
         format!("{} ({}) - achieved a grade of {}",
